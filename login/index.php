@@ -60,71 +60,77 @@
                                     <h2 class="h5 font-w400 text-muted mb-0">Complete los Campos</h2>
                                 </div>
                                
-                                <div px-30" action="be_pages_auth_all.html" method="post">
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control" id="usu_nom" name="usu_nom">
-                                                <label for="usu_nom">Nombres</label>
+                                <form method="post" id="usuario_form">
+                                    <div px-30">
+
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="text" class="form-control" id="usu_nom" name="usu_nom" required>
+                                                    <label for="usu_nom">Nombres</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="text" class="form-control" id="usu_ape" name="usu_ape" required>
+                                                    <label for="usu_ape">Apellidos</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="email" class="form-control" id="usu_correo" name="usu_correo" required>
+                                                    <label for="usu_correo">Correo Electronico</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="password" class="form-control" id="usu_pass1" name="usu_pass1" required>
+                                                    <label for="usu_pass1">Contraseña</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <div class="form-material floating">
+                                                    <input type="password" class="form-control" id="usu_pass2" name="usu_pass2" required>
+                                                    <label for="usu_pass2">Confirme su Contraseña</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-12">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="signup-terms" name="signup-terms">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">Acepto los Terminos y Condiciones</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit"  name="action" value="add" id="btnguardar" class="btn btn-sm btn-hero btn-alt-success">
+                                                <i class="fa fa-plus mr-10"></i> Crear Cuenta
+                                            </button>
+                                            <div class="mt-30">
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#" data-toggle="modal" data-target="#modal-terms">
+                                                    <i class="fa fa-book text-muted mr-5"></i> Leer Terminos y Condiciones
+                                                </a>
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../">
+                                                    <i class="fa fa-user text-muted mr-5"></i> Iniciar Sesion
+                                                </a>
+                                                <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../forgot_password/">
+                                                        <i class="fa fa-warning mr-5"></i> ¿Has olvidado tu contraseña?
+                                                    </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control" id="usu_ape" name="usu_ape">
-                                                <label for="usu_ape">Apellidos</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="email" class="form-control" id="usu_correo" name="usu_correo">
-                                                <label for="usu_correo">Correo Electronico</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" id="usu_pass1" name="usu_pass1">
-                                                <label for="usu_pass1">Contraseña</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" id="usu_pass2" name="usu_pass2">
-                                                <label for="usu_pass2">Confirme su Contraseña</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signup-terms" name="signup-terms">
-                                                <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Acepto los Terminos y Condiciones</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-sm btn-hero btn-alt-success">
-                                            <i class="fa fa-plus mr-10"></i> Crear Cuenta
-                                        </button>
-                                        <div class="mt-30">
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#" data-toggle="modal" data-target="#modal-terms">
-                                                <i class="fa fa-book text-muted mr-5"></i> Leer Terminos y Condiciones
-                                            </a>
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="../">
-                                                <i class="fa fa-user text-muted mr-5"></i> Iniciar Sesion
-                                            </a>
-                                        </div>
-                                    </div>
-</div>
-                                <!-- END Sign Up Form -->
+                                </form>
+                                
                             </div>
                         </div>
                     </div>
@@ -180,7 +186,7 @@
  
         <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>      
         <script src="../public/assets/js/pages/op_auth_signup.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script type="text/javascript" src="login.js"></script>
 
     </body>

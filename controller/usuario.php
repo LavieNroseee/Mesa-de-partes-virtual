@@ -14,8 +14,17 @@ switch ($_GET["op"]) {
                 if(is_array($datos)==true and count($datos)==0){
 
                     $usuario->insert_usuario($_POST["usu_nom"],$_POST["usu_ape"],$_POST["usu_correo"],$_POST["usu_pass1"]);
-                }  
+                }  else{
+
+                    echo "correo";
+                }
+        }else{
+
+            echo "pass";
         }
+        
+
+
         break;
     
 

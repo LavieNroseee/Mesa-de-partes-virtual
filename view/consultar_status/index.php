@@ -16,7 +16,7 @@
     </head>
     <body>
        
-        <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+        <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed sidebar-inverse">
           
             <aside id="side-overlay">
                

@@ -17,7 +17,7 @@
     </head>
     <body>
        
-        <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed">
+        <div id="page-container" class="sidebar-o side-scroll page-header-modern main-content-boxed sidebar-inverse">
           
             <aside id="side-overlay">
                
@@ -72,24 +72,26 @@
 
                 
                     <div class="block">
+
                         <div class="block-header block-header-default">
                             <h3 class="block-title">Nuevo Registro <small>Mesa de Partes</small></h3>
+                            <input type="hidden" id="part_id" class="form-control">
                         </div>
 
                         <div class="block-content block-content-full">
 
                             <div class="form-group row">
-                                    <label class="col-12" for="example-text-input">Text</label>
+                                    <label class="col-12" for="part_asun">Asunto</label>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" id="example-text-input" name="example-text-input" placeholder="Texto..">
+                                    <input type="text" class="form-control" id="part_asun" name="part_asun" placeholder="Texto..">
                                 
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                    <label class="col-12" for="example-textarea-input">Textarea</label>
-                                        <div class="col-12">
-                                                <textarea class="form-control" id="example-textarea-input" name="example-textarea-input" rows="6" placeholder="Contenido"></textarea>
+                                    <label class="col-12" for="part_desc">Descripcion</label>
+                                        <Div class="col-12">
+                                                <textarea class="form-control" id="part_desc" name="part_desc" rows="6" placeholder="Contenido"></textarea>
                                         </div>
                             </div>
                             
@@ -101,7 +103,7 @@
                                     </button>
                                     </div>
                                     <div class="col-6 text-right">
-                                        <button type="button" class="btn btn-alt-primary">
+                                        <button type="button" class="btn btn-alt-primary" id="btnguardar">
                                             Guardar <i class="fa fa-save ml-5"></i>
                                         </button>
                                     </div>
@@ -169,6 +171,8 @@
         </div>
       
         <?php require_once("../mainjs/mainjs.php"); ?>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script type="text/javascript" src="nuevo_registro.js"></script>
     </body>
 </html>
 

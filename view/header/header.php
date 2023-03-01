@@ -11,7 +11,7 @@
                     </div>
                     
                     <div class="content-header-section">
-                        <input type="hidden" id="useridx" class="form-control" value=<?php echo $_SESSION["usu_id"] ?>>
+                        <input type="hidden" id="useridx" class="form-control" value=<?php echo $_SESSION["usu_id"]?>>
                         
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,3 +1,10 @@
+    <?php 
+    
+    require_once("../../config/conexion.php");
+    if(isset($_SESSION["usu_id"])){
+
+        ?>
+
 <!doctype html>
 
 <html lang="en" class="no-focus">
@@ -75,3 +82,8 @@
         <?php require_once("../mainjs/mainjs.php"); ?>
     </body>
 </html>
+
+<?php  }else{
+
+    header("Location: ".Conectar::ruta()."index.php");
+}

@@ -1,3 +1,14 @@
+<?php 
+
+require_once("config/conexion.php");
+if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+    require_once("models/Usuario.php");
+    $usuario = new Usuario();
+    $usuario->login();
+}
+
+?>
+
 <!doctype html>
 <!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
 <!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
@@ -63,59 +74,110 @@
                                     <h1 class="h3 font-w700 mt-30 mb-10">Mesa de Partes Virtual</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Por favor inicia sesion</h2>
                                 </div>
+
+
+                    <?php   
+                    
+                        if(isset($_GET["m"])){
+
+                            switch($_GET["m"]){
+
+                                case "1";
+                                ?>
+
+                                <div class="alert alert-danger" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <i class="icon icon-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                        <span>El Usuario y/o Contraseña son Incorrectos. </span>
+                                    </div>
+                                </div>
+
+                                <?php   
+                                break;
+                                case "2";
+                                ?>
+
+                                <div class="alert alert-danger" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <i class="icon icon-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                        <span>Los Campos estan Vacios. </span>
+                                    </div>
+                                </div>
+                            
+                                <?php
+                                break;
+                            }
+                        }
+                    
+                        ?>
+
+                        
+
+
+
+
                                
-                                <form class="js-validation-signin px-30" action="be_pages_auth_all.html" method="post">
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="text" class="form-control" id="login-username" name="login-username">
-                                                <label for="login-username">Correo Electronico</label>
+                               
+                                <form action="" method="post" id="loginnum1">    
+                                         <div class="form-group row">
+                                                <div class="col-12">
+                                                    <div class="form-material floating">
+                                                        <input type="email" class="form-control" id="correo" name="correo">
+                                                        <label for="login-username">Correo Electronico</label>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <div class="form-material floating">
-                                                <input type="password" class="form-control" id="login-password" name="login-password">
-                                                <label for="login-password">Contraseña</label>
+                                            <div class="form-group row">
+                                                <div class="col-12">
+                                                    <div class="form-material floating">
+                                                        <input type="password" class="form-control" id="password" name="password">
+                                                        <label for="login-password">Contraseña</label>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="form-group row">
+                                                <div class="col-12">
+                                                    <label class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
+                                                        <span class="custom-control-indicator"></span>
+                                                        <span class="custom-control-description">Recordarme</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" name="enviar" class="form-control" value="si">
+                                                <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
+                                                    <i class="si si-login mr-10"></i>Iniciar Sesion
+                                                </button>
+                                                
+                                                <div class="mt-30">
+                                                    <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="login/">
+                                                        <i class="fa fa-plus mr-5"></i> Crear Cuenta
+                                                    </a>
+                                                    <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="forgot_password/">
+                                                        <i class="fa fa-warning mr-5"></i> ¿Has olvidado tu contraseña?
+                                                    </a>
+                                                </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-12">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
-                                                <span class="custom-control-indicator"></span>
-                                                <span class="custom-control-description">Recordarme</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <a  class="btn btn-sm btn-hero btn-alt-primary" href="view/home">
-                                            <i class="si si-login mr-10"></i> Iniciar Sesion
-                                        </a>
-                                        <div class="mt-30">
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="login/">
-                                                <i class="fa fa-plus mr-5"></i> Crear Cuenta
-                                            </a>
-                                            <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="forgot_password/">
-                                                <i class="fa fa-warning mr-5"></i> ¿Has olvidado tu contraseña?
-                                            </a>
-                                        </div>
-                                    </div>
+                                 </div>
                                 </form>
-                                <!-- END Sign In Form -->
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <!-- END Page Content -->
+             
             </main>
-            <!-- END Main Container -->
+          
         </div>
-        <!-- END Page Container -->
-
-        <!-- Codebase Core JS -->
+       
         <script src="public/assets/js/core/jquery.min.js"></script>
         <script src="public/assets/js/core/popper.min.js"></script>
         <script src="public/assets/js/core/bootstrap.min.js"></script>

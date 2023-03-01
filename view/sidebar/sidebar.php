@@ -36,7 +36,7 @@
                                 </a>
                                 <ul class="list-inline mt-10">
                                     <li class="list-inline-item">
-                                        <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="be_pages_generic_profile.html">J. Smith</a>
+                                        <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="be_pages_generic_profile.html"><?php echo $_SESSION["usu_nom"]." ".$_SESSION["usu_ape"] ?></a>
                                     </li>
                                     <li class="list-inline-item">
                                         
@@ -45,7 +45,7 @@
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a class="link-effect text-dual-primary-dark" href="op_auth_signin.html">
+                                        <a class="link-effect text-dual-primary-dark" href="../logout/logout.php">
                                             <i class="si si-logout"></i>
                                         </a>
                                     </li>

@@ -60,36 +60,44 @@
                                     <h2 class="h5 font-w400 text-muted mb-0">Complete los Campos</h2>
                                 </div>
                                
-                                <form class="js-validation-signup px-30" action="be_pages_auth_all.html" method="post">
+                                <div px-30" action="be_pages_auth_all.html" method="post">
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="text" class="form-control" id="signup-username" name="signup-username">
-                                                <label for="signup-username">Usuario</label>
+                                                <input type="text" class="form-control" id="usu_nom" name="usu_nom">
+                                                <label for="usu_nom">Nombres</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="email" class="form-control" id="signup-email" name="signup-email">
-                                                <label for="signup-email">Correo Electronico</label>
+                                                <input type="text" class="form-control" id="usu_ape" name="usu_ape">
+                                                <label for="usu_ape">Apellidos</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="password" class="form-control" id="signup-password" name="signup-password">
-                                                <label for="signup-password">Contraseña</label>
+                                                <input type="email" class="form-control" id="usu_correo" name="usu_correo">
+                                                <label for="usu_correo">Correo Electronico</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="password" class="form-control" id="signup-password-confirm" name="signup-password-confirm">
-                                                <label for="signup-password-confirm">Confirme su Contraseña</label>
+                                                <input type="password" class="form-control" id="usu_pass1" name="usu_pass1">
+                                                <label for="usu_pass1">Contraseña</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <div class="form-material floating">
+                                                <input type="password" class="form-control" id="usu_pass2" name="usu_pass2">
+                                                <label for="usu_pass2">Confirme su Contraseña</label>
                                             </div>
                                         </div>
                                     </div>
@@ -115,7 +123,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </form>
+</div>
                                 <!-- END Sign Up Form -->
                             </div>
                         </div>
@@ -148,9 +156,9 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-alt-success" data-dismiss="modal">
-                            <i class="fa fa-check"></i> Perfect
+                            <i class="fa fa-check"></i> Perfecto
                         </button>
                     </div>
                 </div>
@@ -169,13 +177,11 @@
         <script src="../public/assets/js/core/jquery.countTo.min.js"></script>
         <script src="../public/assets/js/core/js.cookie.min.js"></script>
         <script src="../public/assets/js/codebase.js"></script>
-
-        <!-- Page JS Plugins -->
-        <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-        
-
-        <!-- Page JS Code -->
+ 
+        <script src="../public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>      
         <script src="../public/assets/js/pages/op_auth_signup.js"></script>
+
+        <script type="text/javascript" src="login.js"></script>
 
     </body>
 </html>
